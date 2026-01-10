@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #272727;
+    color: #fff;
+}
+
+
+/* HEADER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.header {
+    background: black;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.img-logo {
+    max-width: 160px;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:hover a:hover {
+    background-color: rgba(85, 85, 85, 0.554);
+    border-radius: 9999px;
+    color: #00ff2f;
+}
+
+.nav-item a {
+    padding: 10px 12px;
+    display: block;
+}
+
+.auth button {
+    margin-left: 10px;
+}
+
+
+
+
+/* BUTTON */
+.btn-outline {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 6px 12px;
+}
+
+.btn-primary,
+.cta-btn {
+    background-color: #0057ff;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary:hover,
+.cta-btn:hover {
+    background: #0055ffca;
+}
+
+
+
+
+/* HERO */
+.hero {
+    padding: 30px 0;
+}
+
+.hero-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* HERO IMAGE */
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    /* ✅ JANGAN DIGANTI */
+    object-fit: contain;
+    /* ✅ JAGA RASIO */
+    display: block;
+    border-radius: 5px;
+}
+
+/* GAMES */
+.games {
+    text-align: center;
+    background: transparent;
+    padding: 50px 20px;
+}
+
+.games-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    background-color: #0057ff;
+    padding: 8px 0px;
+    border-radius: 5px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+
+.game-card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.game-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    padding: 2.50px;
+    background: conic-gradient(from 0deg,
+            transparent,
+            #00f0ff,
+            #ff00ff,
+            #ffd700,
+            transparent);
+    animation: spectrumSpin 5s linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .7;
+}
+
+@keyframes spectrumSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.game-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* IMG TAMBAHAN */
+.game-card .game-img {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    z-index: 2;
+}
+
+/* OVERLAY */
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    z-index: 3;
+}
+
+/* BUTTON */
+.game-actions {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.game-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* OPTIONAL HOVER */
+.game-card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* BUTTON WRAPPER */
+.game-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* BUTTON BASE */
+.game-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* ANDROID */
+.game-actions .android {
+    background: #2ecc71;
+    box-shadow: 0 2px 5px 0 black;
+}
+
+/* IOS */
+.game-actions .ios {
+    background: #007aff;
+    box-shadow: 0 2px 5px 0 black;
+}
+
+/* HOVER */
+.game-actions .btn:hover {
+    opacity: 0.6;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-logo {
+        max-width: 140px;
+        margin-bottom: 15px;
+    }
+
+    .header-wrap {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .auth {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero-box {
+        height: 180px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-box {
+        min-height: 180px;
+    }
+
+    .hero-img {
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 0;
+    }
+
+    .hero-box {
+        font-size: 14px;
+        min-height: 140px;
+    }
+
+    .nav-item a {
+        padding: 10px 3px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .hero-img {
+        max-height: 160px;
+    }
+
+    .games {
+        padding: 10px 20px;
+    }
+
+    .img-logo {
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+/* ===== CONTINUOUS MOVING TEXT ===== */
+
+
+.ticker {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(90deg, #020617, #1e293b);
+    padding: 8px 0;
+}
+
+.icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    padding: 0 16px;
+}
+
+.marquee {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 35s linear infinite;
+}
+
+.marquee-track span {
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+    color: #eeff00;
+    padding-right: 150px;
+    /* jarak antar teks */
+}
+
+.ticker:hover .marquee .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(calc(-100%));
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
