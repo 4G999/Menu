@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4G999</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Picture1.ico">
 </head>
 
 <body>
+      <div class="background"></div>
 
     <!-- HEADER -->
     <header class="header">
@@ -16,46 +18,93 @@
             <img class="img-logo" src="img/LOGO COMPANY.png" alt="">
             <nav class="nav">
                 <div class="nav-item">
-                    <a href="#">RULES</a>
+                    <a class="nav-link" href="javascript:void(0)" id="openRules">Rules</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#to-games">GAME</a>
+                    <a class="nav-link" href="#to-games">Game</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#">PROMO</a>
-                </div>
-                <div class="nav-item">
-                    <a href="javascript:void(0)" id="openContact">CONTACT</a>
+                    <a class="nav-link" href="javascript:void(0)" id="openContact">Contact Me</a>
                 </div>
                 <div class="auth">
-                    <button class="btn-primary">JOIN NOW</button>
+                    <a target="_blank" href="https://www.watsapp.cc/4G999/"><button class="btn-primary">JOIN
+                            NOW</button></a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- CONTACT POPUP -->
-    <div class="contact-overlay" id="contactPopup">
-        <div class="contact-card">
-            <button class="close-btn" id="closeContact">&times;</button>
+    <!-- RULES -->
+    <div class="rules-overlay" id="rulesPopup">
+        <div class="rules-card">
+            <button class="rules-close" id="closeRules">&times;</button>
+            <div class="rules-content">
+                <h2 class="rules-title">LIMIT CUCI</h2>
+                <div class="rules-box">
+                    <h3>SLOT GAME ONLY</h3>
+                    <p>TopUp Di Bawah 20 Max Cuci 200</p>
+                    <p>TopUp 30 Sampai 99 Max Cuci 5K</p>
+                    <p>TopUp 100 Sampai 499 Max Cuci 10K</p>
+                    <p>TopUp Di Atas 500 Sampai 1000 Max Cuci 300K</p>
+                </div>
+                <hr>
+                <div class="rules-box">
+                    <h3>LIVE GAME ONLY</h3>
+                    <p>In 100 Sampai 500 - Max Cuci 5K</p>
+                    <p>In Di Atas 600 Sampai 1K - Max Cuci 10K</p>
+                    <p>In 1000+++ Max Cuci 30K</p>
+                </div>
 
-            <div class="contact-item">
-                <a href="https://t.me/Velly_4G999" target="_blank">
-                    <img src="img/Telegram.png" alt="Telegram">
-                </a>
-                <span>TELEGRAM</span>
-            </div>
-
-            <div class="contact-item">
-                <a href="https://www.watsapp.cc/4G999/" target="_blank">
-                    <img src="img/Whatsapp.png" alt="Whatsapp">
-                </a>
-                <span>WHATSAPP</span>
+                <h2 class="rules-title">SYARAT CUCI</h2>
+                <div class="rules-box">
+                    <h3>SLOT GAME</h3>
+                    <ul>
+                        <li><span class="yellow">Ambil Bonus</span> = Turnover x2</li>
+                        <li><span class="yellow">No Bonus</span> = No Turnover</li>
+                        <li>Live Game mesti <b>NO BONUS</b> & Turnover x5</li>
+                        <li>Ocean King mesti <b>NO BONUS</b> & Turnover x2</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="rules-box">
+                    <p><b>Ambil bonus tidak dibenarkan main:</b></p>
+                    <p>LIVE GAME / TABLE GAME / TEMBAK IKAN</p>
+                    <p class="red">Jika Langgar Syarat TIDAK DAPAT CUCI</p>
+                    <p><b>Tidak ambil bonus semua game boleh main</b></p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- CONTACT POPUP -->
+    <div class="contact-overlay" id="contactPopup">
+        <div class="contact-panel">
+            <div class="contact-header">
+                <span>CONTACT US</span>
+                <button id="closeContact">&times;</button>
+            </div>
+            <div class="contact-body">
+                <a href="https://t.me/Velly_4G999" target="_blank" class="contact-box telegram">
+                    <img src="img/telegram.png">
+                    <div>
+                        <strong>Telegram </strong>
+                        <p></p>
+                        <small>Chat with us</small>
+                    </div>
+                </a>
+                <a href="https://www.watsapp.cc/4G999/" target="_blank" class="contact-box whatsapp">
+                    <img src="img/whatsapp.png">
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p></p>
+                        <small>Chat with us</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
+    <!-- MOVING TEXT -->
     <div class="ticker">
         <div class="icon">📣</div>
         <div class="marquee">
@@ -70,7 +119,7 @@
         </div>
     </div>
 
-    <!-- HERO -->
+    <!-- WELCOME IMG -->
     <section class="hero">
         <div class="container hero-box">
             <img src="img/WELCOME.png" alt="Welcome" class="hero-img">
